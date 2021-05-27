@@ -1,0 +1,283 @@
+body{
+    margin: 0;
+   overflow-y: hidden;
+}
+*{
+    box-sizing: border-box;
+}
+
+.navbar{
+    height: 12hv;
+    background: linear-gradient(to bottom, hsl(310, 68%, 73%) 0%, #a6b2c9 100%);
+    display: flex;              /* for horizontal (for content flow */
+}
+
+.ticket-container{
+    /* min-height: 88vh;                           adust height */
+    height: 68vh;
+     background:linear-gradient(to bottom, #9fbfe4 0%, #6a6196 100%); 
+    position: relative;                    /* relative */
+    padding: 5%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;                           /* next row*/
+    overflow-y: auto;
+}
+
+.title-navbar{
+    width:50vw;
+    color:rgb(51, 115, 167);
+    margin-top: 10px;
+    font-size: 200%;
+    height:fit-content;
+    text-align: center;
+    font-weight: 500;
+    font-family: cursive;
+}
+
+.filter-container,
+.add-delete-container{
+    height: 8vh;
+    margin-top: 2vh;
+    
+    border-radius: 3px;               /*   side curve At 50% it become circle*/ 
+    background-color: black;
+    
+}
+.filter-container{
+    width: 18vw;
+    display: flex;
+
+    height: 8vh;
+    margin-top: 2vh;
+    margin-left: 8vw;
+    border-radius: 3px;               /*   side curve At 50% it become circle  */
+    background-color: #333;
+    
+}
+
+.add-delete-container{
+    width: 9vw;
+    display: flex;
+
+    height: 8vh;
+    margin-top: 2vh;
+    margin-right:8vw ;
+    border-radius: 3px;               /*   side curve At 50% it become circle  */
+    background-color: #333;
+}
+
+.filter{
+    height: 100%;
+    width: 25%;
+    
+}
+.red-color-btn,
+.blue-color-btn,
+.green-color-btn,
+.yellow-color-btn{
+    display: block;
+    width: 40%;
+    height: 40%;
+    border-radius: 3px;
+    margin-top:calc(8vh*0.3);
+    margin-bottom:calc(8vh*0.3);
+    margin-left:calc(4.5vw*0.3);
+    margin-right:calc(4.5vw*0.3);
+}
+
+.red-color-btn, .modal-red-filter,.ticket-color-red{
+    background-color: rgb(238, 27, 12);
+}
+
+.blue-color-btn, .modal-blue-filter,.ticket-color-blue{
+    background-color: blue;
+}
+
+.green-color-btn, .modal-green-filter,.ticket-color-green{
+    background-color: green;
+}
+
+.yellow-color-btn, .modal-yellow-filter,.ticket-color-yellow{
+    background-color: yellow;
+}
+
+.filter:hover{
+    background-color:white;
+    cursor: pointer;
+}
+.filter.active{
+    background-color:rgba(255, 255, 255, 0.973);
+}
+
+.add,.delete{
+    height: 100%;
+    width: 50%;
+}
+
+
+
+.action-btn{
+    display: block;
+    height: 40%;
+    width: 40%;
+    margin-top:calc(8vh*0.3);
+    margin-bottom:calc(8vh*0.3);
+    margin-left:calc(4.5vw*0.3);
+    margin-right:calc(4.5vw*0.3);
+    background-color: white;
+    padding-left: 3%;
+
+}
+
+.add:hover,.delete:hover{
+    background-color: white;
+    cursor: pointer;
+    
+
+}
+
+.modal{
+    box-shadow: 0px 0px 50px 5px rgb(0, 0, 0);       /* horizonatal vertical blury spraderadius*/
+    height: 18rem;
+    width: 35rem;
+    background-color: white;
+    display: flex;
+    position:absolute;              /* (absolute) shift towards parent corner whose position is relative */
+    top: 10rem;
+    left:calc((100vw - 35rem) / 2);
+}
+
+.task-to-be-added{
+    height: 100%;
+    width: 70%;
+    padding: 3rem;
+    outline: none;
+    overflow: auto;
+}
+
+.modal-priority-list{
+    display: flex;
+    flex-direction: column;        /* imp for spacing in column*/
+    width: 30%;
+    height: 100%;
+     justify-content: space-between;            /* equal space  */
+     padding: 3rem;
+     background-color:black;
+}
+
+.modal-filter{
+    width: 100%;
+    height: 20%;
+}
+.modal-filter:hover{
+    opacity: 0.5;
+    cursor: pointer;
+}
+.modal-filter.active{
+    border: 5px solid white;
+}
+
+.ticket{
+    height:9rem;
+    width: 16rem;
+    background-color: white;
+    margin-bottom: 15px;
+    
+}
+
+.ticket-color{
+    height: 6%;
+    width: 100%;
+}
+.ticket-id{
+    height: 15%;
+    width: 100%;
+    padding: 5%;
+    color: gray;
+}
+
+.task{
+    height: 59%;
+    width: 100%;
+    padding: 5%;
+}
+
+.ticket.active{
+    box-shadow: 0 0 5px 2px;
+}
+
+.complete{
+    padding-left: 10px;
+    padding-bottom: 10px;
+    height:20%;
+    width: 20%;
+    margin-left: 85%;
+}
+
+.complete:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+.completed-task-container{
+    height: 22vh;
+    width: 100%;
+    display: flex;
+} 
+
+ .task-heading{
+    /*display: flex;
+    flex-wrap: column;
+    align-items: center;
+    justify-content: center;*  */
+    width: 15%;
+    height:22vh;
+  
+    background:linear-gradient(to left, #8996d3, #c0e8e8);
+}
+
+.task-heading-com{
+    height: 50%;
+    width:100%;
+     /*padding-left: 50px;
+    
+    font-weight: 1000;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 19px;
+    display: flex;
+    align-items: center; */
+    color:rgb(51, 115, 167);
+    margin-top: 10px;
+    font-size: 200%;
+    width: 100%;
+    height:fit-content;
+    text-align: center;
+    font-weight: 500;
+    font-family: cursive;
+  
+    
+}
+
+.delete-btn{
+    width:100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.delete-btn:hover{
+    cursor:pointer;
+    transform: scale(1.5);
+    
+}
+.completed-task-list{
+    width: 85%;
+    height:22vh;
+    display:flex;
+    background: linear-gradient(to left, #ac88a3, #8996d3);
+    /* display: flex;
+    align-items: center; */
+    /* justify-content: center; */
+} 
