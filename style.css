@@ -227,10 +227,7 @@ body{
 } 
 
  .task-heading{
-    /*display: flex;
-    flex-wrap: column;
-    align-items: center;
-    justify-content: center;*  */
+   
     width: 15%;
     height:22vh;
   
@@ -240,13 +237,7 @@ body{
 .task-heading-com{
     height: 50%;
     width:100%;
-     /*padding-left: 50px;
-    
-    font-weight: 1000;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 19px;
-    display: flex;
-    align-items: center; */
+     
     color:rgb(51, 115, 167);
     margin-top: 10px;
     font-size: 200%;
@@ -277,7 +268,5 @@ body{
     height:22vh;
     display:flex;
     background: linear-gradient(to left, #ac88a3, #8996d3);
-    /* display: flex;
-    align-items: center; */
-    /* justify-content: center; */
+   
 } 
